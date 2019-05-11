@@ -1,3 +1,21 @@
+
 <p>
-  template works!
+  property binding works!
 </p>
+<input type="text" class="form-control" (input)="UpdateServer($event)">
+<button  class="btn btn-primary" (click)="createserver()" [disabled]="!allow">Add permission</button>
+
+{{ create }}
+
+
+<div class="container">
+    <div class="row">
+
+        so for string interpolation we use a string or anything that can be converted to string.
+
+        <p>This is {{ value1 }} interpolation with {{ num }}</p>
+        <p>This is {{ getRandomString() }} interpolation by a function</p>
+        <br>
+
+    </div>
+</div>

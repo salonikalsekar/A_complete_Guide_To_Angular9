@@ -1,23 +1,38 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  // selector: '[app-template]',
-  // selector: '.app-template',
   selector: 'app-template',
-  template: '<app-server>inline template</app-server>',
-  //styleUrls: ['./template.component.css']
-  styles:[`
-   p{
-     color:blue;
-   }
-  `]
+  templateUrl: './template.component.html',
+  styleUrls: ['./template.component.css']
+
 })
 
 //just an example for adding inline styles and template 
 export class TemplateComponent implements OnInit {
+create = "no server"
+  allow = false
+  name = 'Saloni';
+  value1 : string= "string"
+  num: number = 10
 
-  constructor() { }
+  getRandomString(){
+   return this.value1;
+  }
 
+  constructor(){
+    setTimeout(()=>{
+      this.allow = true
+    }, 2000)
+  }
+
+  createserver(){
+    this.create= "server created"
+  }
+  UpdateServer(event:any){
+    this.create = (<HTMLInputElement>event.target).value 
+    console.log(event)
+
+  }
   ngOnInit() {
   }
 
