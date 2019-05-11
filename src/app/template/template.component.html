@@ -2,7 +2,7 @@
 <p>
   property binding works!
 </p>
-<input type="text" class="form-control" (input)="UpdateServer($event)">
+<input type="text" class="form-control" [(ngModel)]="create">
 <button  class="btn btn-primary" (click)="createserver()" [disabled]="!allow">Add permission</button>
 
 {{ create }}
