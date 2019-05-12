@@ -16,11 +16,19 @@
         <p>This is {{ value1 }} interpolation with {{ num }}</p>
         <p>This is {{ getRandomString() }} interpolation by a function</p>
         <br>
-        
-
-
     </div>
 </div>
 if-else
 <div *ngIf="serverCreatedngif; else useelse">server is created when ngif is true</div>
 <ng-template #useelse><p>no server is created when else is true</p></ng-template>
+
+<div>
+  <p [ngClass]="{styleDyn : serverCreatedngif == true}" 
+  [ngStyle]="{backgroundColor: getColor()}">styling dynamically </p>
+</div>
+
+<div>
+  <p *ngFor = "let data of newArray; let i =index">  
+    {{data}} {{i}}
+    </p>
+</div>

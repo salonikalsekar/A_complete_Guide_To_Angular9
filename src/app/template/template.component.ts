@@ -9,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
 
 //just an example for adding inline styles and template 
 export class TemplateComponent implements OnInit {
+  newArray:any;
 create = "no server"
 serverCreatedngif=false;
   allow = false
@@ -21,6 +22,7 @@ serverCreatedngif=false;
   }
 
   constructor(){
+    
     setTimeout(()=>{
       this.allow = true
     }, 2000)
@@ -36,6 +38,10 @@ serverCreatedngif=false;
 
   }
   ngOnInit() {
-  }
+    this.newArray = ['apple',  'mango' , 'papaya']
 
+  }
+  getColor(){
+    return this.serverCreatedngif == true ? 'green' : 'red';
+  }
 }
