@@ -10,6 +10,7 @@ import { Component, OnInit } from '@angular/core';
 //just an example for adding inline styles and template 
 export class TemplateComponent implements OnInit {
 create = "no server"
+serverCreatedngif=false;
   allow = false
   name = 'Saloni';
   value1 : string= "string"
@@ -26,6 +27,7 @@ create = "no server"
   }
 
   createserver(){
+    this.serverCreatedngif = true;
     this.create= "server created"
   }
   UpdateServer(event:any){

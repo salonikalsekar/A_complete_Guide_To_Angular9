@@ -16,6 +16,11 @@
         <p>This is {{ value1 }} interpolation with {{ num }}</p>
         <p>This is {{ getRandomString() }} interpolation by a function</p>
         <br>
+        
+
 
     </div>
 </div>
+if-else
+<div *ngIf="serverCreatedngif; else useelse">server is created when ngif is true</div>
+<ng-template #useelse><p>no server is created when else is true</p></ng-template>
