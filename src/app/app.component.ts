@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { getRandomString } from 'selenium-webdriver/safari';
 
 @Component({
   selector: 'app-root',
@@ -7,5 +6,23 @@ import { getRandomString } from 'selenium-webdriver/safari';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  serverElements = [];
+  newServerName = '';
+  newServerContent = '';
 
+  onAddServer() {
+    this.serverElements.push({
+      type: 'server',
+      name: this.newServerName,
+      content: this.newServerContent
+    });
+  }
+
+  onAddBlueprint() {
+    this.serverElements.push({
+      type: 'blueprint',
+      name: this.newServerName,
+      content: this.newServerContent
+    });
+  }
 }
