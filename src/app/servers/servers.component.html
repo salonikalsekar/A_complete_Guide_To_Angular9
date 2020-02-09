@@ -1,7 +1,16 @@
 
 <p>Property Binding</p>
 <p [innerText]= "allowNewServer"></p>
-<button [disabled]= "!allowNewServer" class="btn btn-primary">Add Server</button>
 <hr>
 
+<p>Event Binding</p>
+<button [disabled]= "!allowNewServer" (click)= "onCreateServer()" class="btn btn-primary">Add Server</button>
+<p>{{ serverCreationStatus }}</p>
+<hr>
+
+<p>Two Way Binding</p>
+<label>Server Name</label>
+<input type="text" (input)="updateServerName($event)" class="form-control">
+<p>{{ serverName }}</p>
+<hr>
 <app-server></app-server>
